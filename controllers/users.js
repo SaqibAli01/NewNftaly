@@ -97,7 +97,7 @@ export const forgetPassword = async (req, res) => {
     // return res.status(400).send("incorrect email");
   }
   const token = await logIn({ _id: user?._id });
-  const verifyUrl = `http://localhost:8080/reset-password?token=${token}`;
+  const verifyUrl = `https://newnftaly-production/reset-password?token=${token}`;
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     auth: {
